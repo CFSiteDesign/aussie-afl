@@ -42,6 +42,14 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Fiesta theme tokens */
+    --fiesta-green: 145 63% 32%;
+    --fiesta-red: 355 78% 56%;
+    --fiesta-gold: 45 93% 47%;
+    --fiesta-pink: 330 81% 60%;
+    --fiesta-cream: 43 100% 97%;
+    --fiesta-ink: 220 40% 13%;
   }
 
   .dark {
@@ -80,6 +88,14 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Fiesta theme tokens in dark mode */
+    --fiesta-green: 145 63% 42%;
+    --fiesta-red: 355 78% 66%;
+    --fiesta-gold: 45 93% 57%;
+    --fiesta-pink: 330 81% 70%;
+    --fiesta-cream: 220 30% 12%;
+    --fiesta-ink: 210 40% 98%;
   }
 }
 
