@@ -63,9 +63,9 @@ const EventSelector = () => {
             placeholder="SEARCH LOCATION..."
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            className="afl-chip w-full bg-[var(--afl-white)] p-4 text-base font-black uppercase tracking-tight text-[var(--afl-maroon-deep)] outline-none placeholder:text-[var(--afl-maroon-deep)]/35 focus:ring-4 focus:ring-[var(--afl-mint)] md:p-5 md:text-xl"
+            className="afl-chip w-full bg-[var(--afl-white)] p-4 text-center text-base font-black uppercase tracking-tight text-[var(--afl-maroon-deep)] outline-none placeholder:text-[var(--afl-maroon-deep)]/35 focus:ring-4 focus:ring-[var(--afl-mint)] md:p-5 md:text-xl"
           />
-          <div className="no-scrollbar mt-3 flex gap-2 overflow-x-auto pb-1 md:mt-4 md:gap-3">
+          <div className="no-scrollbar mt-3 flex gap-2 overflow-x-auto pb-1 md:mt-4 md:justify-center md:gap-3">
             {COUNTRIES.map((option) => (
               <button
                 key={option}
@@ -98,7 +98,7 @@ const EventSelector = () => {
                       : 'border-[3px] border-dashed border-[var(--afl-white)]/35 text-[var(--afl-white)]'
                   }`}
                 >
-                  <div className="mb-4 flex items-start justify-between gap-3">
+                  <div className="mb-4 flex items-center justify-center gap-2.5">
                     <span
                       className={`rounded-md px-2 py-0.5 text-[0.6rem] font-black uppercase tracking-wide md:text-xs ${
                         live
@@ -119,7 +119,7 @@ const EventSelector = () => {
                     )}
                   </div>
 
-                  <h3 className={`font-display text-3xl md:text-4xl ${live ? '' : 'text-[var(--afl-white)]/55'}`}>
+                  <h3 className={`font-display text-center text-3xl md:text-4xl ${live ? '' : 'text-[var(--afl-white)]/55'}`}>
                     {location.city}
                   </h3>
 
@@ -132,7 +132,7 @@ const EventSelector = () => {
                             href={ticket.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-between gap-2 rounded-[10px] bg-[var(--afl-red)] px-3 py-3 text-[0.7rem] font-black uppercase leading-tight tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:text-sm"
+                            className="flex items-center justify-center gap-2 rounded-[10px] bg-[var(--afl-red)] px-3 py-3 text-center text-[0.7rem] font-black uppercase leading-tight tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:text-sm"
                           >
                             {ticket.label}
                             <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -140,14 +140,14 @@ const EventSelector = () => {
                         ) : (
                           <span
                             key={ticket.label}
-                            className="rounded-[10px] border-2 border-dashed border-[var(--afl-maroon-deep)]/30 px-3 py-3 text-[0.7rem] font-black uppercase leading-tight tracking-tight text-[var(--afl-maroon-deep)]/45 md:text-sm"
+                            className="rounded-[10px] border-2 border-dashed border-[var(--afl-maroon-deep)]/30 px-3 py-3 text-center text-[0.7rem] font-black uppercase leading-tight tracking-tight text-[var(--afl-maroon-deep)]/45 md:text-sm"
                           >
                             {ticket.label} — soon
                           </span>
                         ),
                       )
                     ) : (
-                      <span className="text-[0.7rem] font-black uppercase tracking-tight text-[var(--afl-white)]/50 md:text-sm">
+                      <span className="text-center text-[0.7rem] font-black uppercase tracking-tight text-[var(--afl-white)]/50 md:text-sm">
                         Tickets not up yet
                       </span>
                     )}
@@ -163,7 +163,7 @@ const EventSelector = () => {
         )}
 
         {/* Footnote */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t-2 border-[var(--afl-white)]/20 pt-6 md:mt-14 md:flex-row">
+        <div className="mt-10 flex flex-col items-center gap-4 border-t-2 border-[var(--afl-white)]/20 pt-6 text-center md:mt-14">
           <p className="text-[0.7rem] font-black uppercase tracking-widest text-[var(--afl-white)]/60 md:text-xs">
             {ordered.length} of {LOCATIONS.length} locations · {liveCount} on sale
           </p>

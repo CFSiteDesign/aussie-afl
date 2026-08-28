@@ -44,13 +44,13 @@ const HaGiangSection = () => (
         </div>
 
         {/* Detail */}
-        <div className="afl-chip flex flex-col bg-[var(--afl-white)] p-6 text-[var(--afl-maroon-deep)] md:p-9">
+        <div className="afl-chip flex flex-col bg-[var(--afl-white)] p-6 text-center text-[var(--afl-maroon-deep)] md:p-9">
           <p className="text-base font-medium leading-relaxed md:text-xl">
             Watch the AFL Grand Final on the 26th in Hanoi with your new Aussie mates, enjoy the
             unlimited drinks package, then head off together on a 4D/3N Ha Giang Loop adventure.
           </p>
 
-          <ul className="mt-7 space-y-4 md:mt-9">
+          <ul className="mx-auto mt-7 w-fit space-y-4 text-left md:mt-9">
             {INCLUSIONS.map(({ icon: Icon, text }) => (
               <li key={text} className="flex items-start gap-3">
                 <span className="mt-0.5 shrink-0 rounded-md bg-[var(--afl-red)] p-1.5">
@@ -72,7 +72,7 @@ const HaGiangSection = () => (
             href={HA_GIANG_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="afl-chip afl-glow-strong mt-7 block bg-[var(--afl-red)] px-5 py-4 text-center text-sm font-black uppercase leading-tight tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-lg lg:mt-auto"
+            className="afl-chip afl-glow-strong mt-7 flex items-center justify-center bg-[var(--afl-red)] px-5 py-4 text-center text-sm font-black uppercase leading-tight tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-lg lg:mt-auto"
           >
             Book the Aussies In Ha Giang Loop
           </a>

@@ -75,20 +75,20 @@ const HeroSection = () => (
           href={HA_GIANG_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="afl-chip flex-1 bg-[var(--afl-red)] px-6 py-4 text-sm font-black uppercase tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-base"
+          className="afl-chip flex flex-1 items-center justify-center px-6 py-4 text-center text-sm font-black uppercase tracking-tight bg-[var(--afl-red)] text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-base"
         >
           Book the Ha Giang Loop
         </a>
         <a
           href="#events"
-          className="afl-chip flex-1 bg-[var(--afl-white)] px-6 py-4 text-sm font-black uppercase tracking-tight text-[var(--afl-maroon-deep)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-base"
+          className="afl-chip flex flex-1 items-center justify-center px-6 py-4 text-center text-sm font-black uppercase tracking-tight bg-[var(--afl-white)] text-[var(--afl-maroon-deep)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-base"
         >
           Find your event
         </a>
       </div>
 
       {/* Aussies In bubble + code note, per the brief */}
-      <div className="mt-10 w-full max-w-xl pb-6 text-left md:mt-12 md:pb-2">
+      <div className="mt-10 w-full max-w-xl pb-6 md:mt-12 md:pb-2">
         <SpeechBubble speaker="Aussies In" className="w-full">
           <span className="text-sm font-medium leading-[2] text-[var(--afl-maroon-deep)] md:text-base">
             Oi. Put <CodeChip /> in at checkout so we can sit you on an{' '}
