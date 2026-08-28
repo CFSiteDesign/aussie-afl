@@ -25,7 +25,15 @@ const HeroSection = () => (
         // React 18 does not map the camelCase prop, so pass the DOM attribute.
         {...{ fetchpriority: 'high' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[var(--afl-maroon-deep)]/80 via-[var(--afl-maroon-deep)]/45 to-[var(--afl-maroon-deep)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--afl-maroon-deep)]/90 via-[var(--afl-maroon-deep)]/60 to-[var(--afl-maroon-deep)]" />
+      {/* Extra vignette behind the headline so the mint type pops even on busy crowd areas. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 90% 70% at 50% 42%, rgba(36,4,6,0.72) 0%, rgba(36,4,6,0.35) 55%, transparent 100%)',
+        }}
+      />
     </div>
 
     <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center px-5 py-8 text-center md:min-h-0 md:px-10 md:py-14">
