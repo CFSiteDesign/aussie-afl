@@ -34,10 +34,10 @@ const CodeChip = ({ size = 'sm' }: CodeChipProps) => {
       type="button"
       onClick={copy}
       aria-label={copied ? `Copied code ${AUSSIES_IN_CODE}` : `Copy code ${AUSSIES_IN_CODE}`}
-      className={`group inline-flex items-center gap-2 border-border bg-[hsl(var(--aussie-gold))] font-black uppercase tracking-tight text-black transition-transform hover:-translate-y-0.5 ${
+      className={`group inline-flex items-center gap-2 border-[var(--mm-black)] bg-[var(--mm-yellow)] font-black uppercase tracking-tight text-[var(--mm-black)] transition-transform hover:-translate-y-0.5 ${
         isLarge
-          ? 'border-4 px-5 py-3 text-2xl brutalist-shadow md:px-7 md:py-4 md:text-4xl'
-          : 'border-2 px-1.5 py-0 my-0.5 align-middle text-[0.95em] brutalist-shadow-sm'
+          ? 'mm-shadow border-4 px-5 py-3 text-2xl md:px-8 md:py-4 md:text-4xl'
+          : 'mm-shadow-sm my-0.5 mr-1.5 border-2 px-1.5 py-0 align-middle text-[0.95em]'
       }`}
     >
       {AUSSIES_IN_CODE}

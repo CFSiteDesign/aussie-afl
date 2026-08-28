@@ -32,7 +32,7 @@ const FloatingProp = ({ name, className, rotate = 0, reverse = false }: Floating
     loading="lazy"
     draggable={false}
     style={{ '--float-rotate': `${rotate}deg` } as React.CSSProperties}
-    className={`pointer-events-none absolute z-20 select-none drop-shadow-2xl ${
+    className={`pointer-events-none absolute z-20 select-none ${
       reverse ? 'animate-float-reverse' : 'animate-float'
     } ${className}`}
   />

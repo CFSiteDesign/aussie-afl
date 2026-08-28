@@ -1,65 +1,53 @@
+import Wordmark from '@/components/brand/Wordmark'
 import { GRAND_FINAL_DATE, HA_GIANG_URL, POSTER_ASSETS_URL } from '@/data/events'
 
+const LINKS = [
+  { label: 'Ha Giang Loop package', href: '#ha-giang', external: false },
+  { label: 'All AFL events', href: '#events', external: false },
+  { label: 'The code', href: '#code', external: false },
+  { label: 'Book Ha Giang', href: HA_GIANG_URL, external: true },
+  { label: 'Poster assets', href: POSTER_ASSETS_URL, external: true },
+]
+
 const FooterSection = () => (
-  <footer className="bg-[hsl(var(--aussie-green))] py-11 md:py-16">
-    <div className="mx-auto max-w-7xl px-4 md:px-10">
-      <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+  <footer className="bg-[var(--mm-black)] py-14 md:py-20">
+    <div className="mx-auto max-w-7xl px-5 md:px-12">
+      <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div>
           <div className="flex flex-wrap items-center gap-3">
-            <span className="border-4 border-border bg-black px-3 py-1.5 text-sm font-black uppercase tracking-tight text-white">
+            <span className="border-4 border-[var(--mm-paper)] bg-[var(--mm-black)] px-3 py-1.5 text-xs font-black uppercase tracking-tight text-[var(--mm-paper)]">
               Mad Monkey
             </span>
-            <span className="text-xl font-black text-white">×</span>
-            <span className="border-4 border-border bg-[hsl(var(--aussie-gold))] px-3 py-1.5 text-sm font-black uppercase tracking-tight text-black">
+            <span className="text-lg font-black text-[var(--mm-paper)]">×</span>
+            <span className="border-4 border-[var(--mm-black)] bg-[var(--mm-yellow)] px-3 py-1.5 text-xs font-black uppercase tracking-tight text-[var(--mm-black)]">
               Aussies In
             </span>
           </div>
-          <p className="mt-5 max-w-md text-base font-bold text-white/90 md:text-lg">
-            One link, every AFL Grand Final event across South East Asia. {GRAND_FINAL_DATE}.
+          <p className="font-display mt-6 max-w-md text-2xl text-[var(--mm-paper)] md:text-4xl">
+            One link. Every AFL event. {GRAND_FINAL_DATE}.
           </p>
         </div>
 
         <nav aria-label="Footer" className="flex flex-col gap-3">
-          <a
-            href="#ha-giang"
-            className="text-sm font-black uppercase tracking-tight text-white underline-offset-4 hover:underline md:text-base"
-          >
-            Ha Giang Loop package
-          </a>
-          <a
-            href="#events"
-            className="text-sm font-black uppercase tracking-tight text-white underline-offset-4 hover:underline md:text-base"
-          >
-            All AFL events
-          </a>
-          <a
-            href="#code"
-            className="text-sm font-black uppercase tracking-tight text-white underline-offset-4 hover:underline md:text-base"
-          >
-            Aussies In code
-          </a>
-          <a
-            href={HA_GIANG_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-black uppercase tracking-tight text-white underline-offset-4 hover:underline md:text-base"
-          >
-            Book Ha Giang
-          </a>
-          <a
-            href={POSTER_ASSETS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-black uppercase tracking-tight text-white/70 underline-offset-4 hover:underline md:text-base"
-          >
-            Poster assets
-          </a>
+          {LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="text-xs font-black uppercase tracking-tight text-[var(--mm-paper)] underline-offset-4 hover:text-[var(--mm-yellow)] hover:underline md:text-sm"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
       </div>
 
-      <p className="mt-10 border-t-4 border-black/25 pt-6 text-xs font-black uppercase tracking-widest text-white/70 md:mt-14">
-        © {new Date().getFullYear()} Mad Monkey Hostels · In partnership with Aussies In
-      </p>
+      <div className="mt-12 flex flex-col-reverse items-start justify-between gap-8 border-t-4 border-[var(--mm-paper)]/20 pt-8 md:mt-16 md:flex-row md:items-end">
+        <p className="text-[0.7rem] font-black uppercase tracking-widest text-[var(--mm-paper)]/55 md:text-xs">
+          © {new Date().getFullYear()} Mad Monkey Hostels · with Aussies In
+        </p>
+        <Wordmark tone="light" />
+      </div>
     </div>
   </footer>
 )

@@ -1,10 +1,11 @@
+import Starburst from '@/components/brand/Starburst'
 import { AUSSIES_IN_CODE } from '@/data/events'
 
 const MESSAGES = [
-  `Use code ${AUSSIES_IN_CODE} at checkout`,
-  'Sit at the Aussies In table',
-  'One link · every AFL event',
-  'Green & gold across South East Asia',
+  `Code ${AUSSIES_IN_CODE} at checkout`,
+  'Sit on an Aussies In table',
+  'One link. Every AFL event.',
+  '26 September. All in.',
 ]
 
 /**
@@ -17,19 +18,17 @@ const CodeMarquee = () => {
       {MESSAGES.map((message) => (
         <li
           key={message}
-          className="flex shrink-0 items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-wider text-white md:gap-14 md:text-lg"
+          className="flex shrink-0 items-center gap-8 whitespace-nowrap text-xs font-black uppercase tracking-widest text-[var(--mm-paper)] md:gap-14 md:text-base"
         >
           {message}
-          <span aria-hidden="true" className="text-[hsl(var(--aussie-gold))]">
-            ★
-          </span>
+          <Starburst className="h-5 w-5 shrink-0 md:h-6 md:w-6" fill="var(--mm-green)" />
         </li>
       ))}
     </ul>
   )
 
   return (
-    <div className="overflow-hidden border-b-4 border-border bg-black py-3 md:py-4">
+    <div className="overflow-hidden border-b-4 border-[var(--mm-black)] bg-[var(--mm-black)] py-3 md:py-4">
       <div className="flex w-max animate-marquee">
         {track}
         <div aria-hidden="true" className="flex">
