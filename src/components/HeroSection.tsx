@@ -25,12 +25,20 @@ const HeroSection = () => (
         // React 18 does not map the camelCase prop, so pass the DOM attribute.
         {...{ fetchpriority: 'high' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[var(--afl-maroon-deep)]/80 via-[var(--afl-maroon-deep)]/45 to-[var(--afl-maroon-deep)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--afl-maroon-deep)]/90 via-[var(--afl-maroon-deep)]/60 to-[var(--afl-maroon-deep)]" />
+      {/* Extra vignette behind the headline so the mint type pops even on busy crowd areas. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 90% 70% at 50% 42%, rgba(36,4,6,0.72) 0%, rgba(36,4,6,0.35) 55%, transparent 100%)',
+        }}
+      />
     </div>
 
     <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center px-5 py-8 text-center md:min-h-0 md:px-10 md:py-14">
       {/* Presented by */}
-      <p className="flex items-center gap-2.5 text-[0.65rem] font-black uppercase tracking-[0.3em] text-[var(--afl-white)]/85 md:text-xs">
+      <p className="text-shadow-hero flex items-center gap-2.5 text-[0.65rem] font-black uppercase tracking-[0.3em] text-[var(--afl-white)] md:text-xs">
         <img src={mmHead} alt="" aria-hidden="true" className="h-6 w-6 md:h-7 md:w-7" width={28} height={28} />
         Mad Monkey <span className="text-[var(--afl-red)]">×</span> Aussies In present
       </p>
@@ -45,18 +53,18 @@ const HeroSection = () => (
       />
 
       {/* Display block */}
-      <h1 className="font-display mt-6 text-[var(--afl-mint)] md:mt-8">
+      <h1 className="font-display text-shadow-hero-strong mt-6 text-[var(--afl-mint)] md:mt-8">
         <span className="block text-[clamp(4rem,17vw,11rem)]">Grand</span>
         <span className="block text-[clamp(4rem,17vw,11rem)]">Final</span>
       </h1>
-      <p className="font-display mt-3 text-[clamp(1.3rem,4.5vw,2.4rem)] text-[var(--afl-mint)]">
+      <p className="font-display text-shadow-hero mt-3 text-[clamp(1.3rem,4.5vw,2.4rem)] text-[var(--afl-mint)]">
         Live + Loud
       </p>
-      <p className="font-display mt-4 text-[clamp(1rem,3.2vw,1.6rem)] tracking-[0.08em] text-[var(--afl-white)] md:mt-5">
+      <p className="font-display text-shadow-hero mt-4 text-[clamp(1rem,3.2vw,1.6rem)] tracking-[0.08em] text-[var(--afl-white)] md:mt-5">
         Sat 26 September
       </p>
 
-      <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-[var(--afl-white)]/90 md:mt-8 md:text-lg">
+      <p className="text-shadow-hero mt-6 max-w-xl text-sm font-medium leading-relaxed text-[var(--afl-white)] md:mt-8 md:text-lg">
         Every Mad Monkey Grand Final party across South East Asia, on one page. Find your hostel,
         grab a ticket, watch the game with your new Aussie mates.
       </p>
