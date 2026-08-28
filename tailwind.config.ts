@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Anton", "Inter", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,10 +52,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        cranky: {
-          DEFAULT: "hsl(var(--cranky))",
-          foreground: "hsl(var(--cranky-foreground))",
-        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -88,10 +85,9 @@ export default {
           "0%, 100%": { transform: "translateY(0) rotate(var(--float-rotate, -6deg))" },
           "50%": { transform: "translateY(20px) rotate(var(--float-rotate, -6deg))" },
         },
-        "falling-heart": {
-          "0%": { transform: "translateY(-10vh) rotate(0deg)", opacity: "0.7" },
-          "50%": { opacity: "0.5" },
-          "100%": { transform: "translateY(110vh) rotate(360deg)", opacity: "0" },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
       },
       animation: {
@@ -99,7 +95,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 4s ease-in-out infinite",
         "float-reverse": "float-reverse 5s ease-in-out infinite",
-        "falling-heart": "falling-heart linear infinite",
+        marquee: "marquee 28s linear infinite",
       },
     },
   },

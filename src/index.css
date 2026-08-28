@@ -1,107 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Anton&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 40% 13%;
+    /* Neo-brutalist Mad Monkey event-page base */
+    --background: 44 62% 91%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 40% 13%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 13%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 145 63% 32%;
+    --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 93% 95%;
-    --secondary-foreground: 220 40% 13%;
+    /* Aussie green */
+    --secondary: 149 100% 26%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Aussie gold */
+    --accent: 46 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
-    --accent: 45 93% 47%;
-    --accent-foreground: 220 40% 13%;
+    --muted: 44 40% 84%;
+    --muted-foreground: 0 0% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 145 63% 32%;
+    --border: 0 0% 0%;
+    --divider: 0 0% 0%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 0%;
 
-    --radius: 0.5rem;
+    --radius: 0px;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 145 63% 32%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 145 63% 32%;
-
-    /* Aussie / AFL theme tokens */
-    --aussie-green: 145 63% 32%;
-    --aussie-gold: 45 93% 47%;
-    --aussie-navy: 220 40% 13%;
-    --aussie-cream: 43 100% 97%;
-  }
-
-  .dark {
-    --background: 220 40% 13%;
-    --foreground: 210 40% 98%;
-
-    --card: 220 35% 18%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 220 35% 18%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 145 63% 42%;
-    --primary-foreground: 220 40% 13%;
-
-    --secondary: 220 30% 20%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 45 93% 57%;
-    --accent-foreground: 220 40% 13%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 145 63% 42%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 145 63% 42%;
-    --sidebar-primary-foreground: 220 40% 13%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 145 63% 42%;
-
-    /* Aussie / AFL theme tokens in dark mode */
-    --aussie-green: 145 63% 42%;
-    --aussie-gold: 45 93% 57%;
-    --aussie-navy: 210 40% 98%;
-    --aussie-cream: 220 30% 12%;
+    /* Named brand tokens */
+    --aussie-green: 149 100% 26%;
+    --aussie-gold: 46 100% 50%;
+    --aussie-ink: 0 0% 0%;
+    --aussie-cream: 44 62% 91%;
+    --aussie-deep: 152 72% 12%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    background-color: hsl(var(--aussie-cream));
+    position: relative;
+  }
+
+  /* Paper grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 300px;
+    background-repeat: repeat;
+  }
+
+  ::selection {
+    background: hsl(var(--aussie-green));
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(44 40% 80%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0 0% 0%);
+    border: 2px solid hsl(44 40% 80%);
+  }
+
+  /* Respect reduced motion for all the float/marquee decoration */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Anton', 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  .brutalist-border {
+    @apply border-4 border-border;
+  }
+
+  .brutalist-shadow {
+    box-shadow: 8px 8px 0px 0px hsl(0 0% 0%);
+  }
+
+  .brutalist-shadow-sm {
+    box-shadow: 4px 4px 0px 0px hsl(0 0% 0%);
+  }
+
+  .brutalist-shadow-hover {
+    box-shadow: 8px 8px 0px 0px hsl(0 0% 0%);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutalist-shadow-hover:hover {
+    box-shadow: 12px 12px 0px 0px hsl(0 0% 0%);
+    transform: translate(-4px, -4px);
+  }
+
+  /* Card presses INTO the page on hover */
+  .brutalist-card-hover {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutalist-card-hover:hover {
+    transform: translate(4px, 4px);
+    box-shadow: none !important;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 2px hsl(0 0% 0%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
