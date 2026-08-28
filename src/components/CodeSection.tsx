@@ -1,18 +1,10 @@
 import allInSticker from '@/assets/all-in-sticker.png'
 import CodeChip from '@/components/CodeChip'
-import FloatingProp from '@/components/FloatingProps'
 import { HA_GIANG_URL } from '@/data/events'
 
 /** The brief's code note: the AUSSIESIN reminder, on the poster's mint. */
 const CodeSection = () => (
   <section id="code" className="relative bg-[var(--afl-mint)] py-16 pb-20 text-[var(--afl-maroon-deep)] md:py-24">
-    <FloatingProp
-      name="footy"
-      rotate={18}
-      reverse
-      className="-top-12 left-1/2 hidden w-24 -translate-x-1/2 lg:block xl:w-28"
-    />
-
     <div className="mx-auto max-w-4xl px-5 text-center md:px-12">
       <p className="text-[0.7rem] font-black uppercase tracking-[0.35em] md:text-xs">
         Do not forget this bit

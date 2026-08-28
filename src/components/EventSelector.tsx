@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 import crowdImage from '@/assets/crowd.jpg'
-import FloatingProp from '@/components/FloatingProps'
 import { COUNTRIES, LOCATIONS, POSTER_ASSETS_URL, isLive, type CountryFilter } from '@/data/events'
 
 /** Every participating Mad Monkey with its ticket options, Vietnam live first. */
@@ -36,8 +35,6 @@ const EventSelector = () => {
         <img src={crowdImage} alt="" className="duo-red h-full w-full object-cover opacity-25" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--afl-maroon-deep)] via-[var(--afl-maroon-deep)]/60 to-[var(--afl-maroon-deep)]" />
       </div>
-
-      <FloatingProp name="beer" rotate={11} reverse className="-top-16 left-6 hidden w-24 lg:block xl:w-28" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-12">
         <div className="mb-8 text-center md:mb-12">
