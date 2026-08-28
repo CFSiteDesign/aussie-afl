@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,61 +7,54 @@
 @layer base {
   :root {
     /*
-     * Mad Monkey canonical palette. Only these values may appear in the UI.
-     * This page runs YELLOW + GREEN on the Bone / Mad Black / Paper anchors —
-     * the Aussie read, two brand colours per composition.
+     * AFL Grand Final poster palette, taken from the two campaign posters:
+     * deep maroon world, bright AFL red for display and CTAs, ice mint for
+     * the GRAND FINAL display type, white for chips and body copy.
      */
-    --mm-blue: #0081f7;
-    --mm-yellow: #ffc000;
-    --mm-lime: #ccff01;
-    --mm-cyan: #00fef3;
-    --mm-orange: #ff6600;
-    --mm-green: #03ff01;
-    --mm-purple: #ab00ff;
-    --mm-pink: #ff01aa;
+    --afl-maroon-deep: #3f080b;
+    --afl-maroon: #5c0d12;
+    --afl-maroon-black: #240406;
+    --afl-red: #e8101c;
+    --afl-mint: #b8f3e6;
+    --afl-white: #ffffff;
 
-    /* Anchors */
-    --mm-black: #0a0a0a;
-    --mm-bone: #f5efe2;
-    --mm-paper: #ffffff;
-
-    /* shadcn primitives, mapped onto the anchors */
-    --background: 40 48% 92%;
-    --foreground: 0 0% 4%;
+    /* shadcn primitives, mapped onto the poster palette */
+    --background: 357 76% 20%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
+    --card-foreground: 357 76% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
+    --popover-foreground: 357 76% 13%;
 
-    --primary: 0 0% 4%;
+    --primary: 356 87% 49%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 100% 50%;
-    --secondary-foreground: 0 0% 4%;
+    --secondary: 167 71% 84%;
+    --secondary-foreground: 357 76% 13%;
 
-    --accent: 120 100% 50%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 167 71% 84%;
+    --accent-foreground: 357 76% 13%;
 
-    --muted: 40 30% 86%;
-    --muted-foreground: 0 0% 28%;
+    --muted: 357 60% 14%;
+    --muted-foreground: 0 0% 80%;
 
-    --destructive: 0 84% 45%;
+    --destructive: 356 87% 49%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 4%;
-    --divider: 0 0% 4%;
+    --border: 0 0% 100%;
+    --divider: 0 0% 100%;
     --input: 0 0% 100%;
-    --ring: 0 0% 4%;
+    --ring: 167 71% 84%;
 
-    --radius: 0px;
+    --radius: 14px;
   }
 }
 
 @layer base {
   * {
-    border-color: var(--mm-black);
+    border-color: var(--afl-white);
   }
 
   html {
@@ -72,24 +65,25 @@
     @apply text-foreground;
     font-family: 'Montserrat', system-ui, sans-serif;
     font-weight: 500;
-    background-color: var(--mm-bone);
+    background-color: var(--afl-maroon-deep);
+    color: var(--afl-white);
     overflow-x: hidden;
   }
 
   ::selection {
-    background: var(--mm-yellow);
-    color: var(--mm-black);
+    background: var(--afl-red);
+    color: var(--afl-white);
   }
 
   ::-webkit-scrollbar {
     width: 12px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--mm-bone);
+    background: var(--afl-maroon-deep);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--mm-black);
-    border: 2px solid var(--mm-bone);
+    background: var(--afl-red);
+    border: 2px solid var(--afl-maroon-deep);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -105,44 +99,39 @@
 }
 
 @layer components {
-  /* Display type: Montserrat Black, uppercase, tight. */
+  /* Poster display type: Anton, uppercase, tall and tight. */
   .font-display {
-    font-family: 'Montserrat', system-ui, sans-serif;
-    font-weight: 900;
+    font-family: 'Anton', 'Montserrat', system-ui, sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: -0.02em;
-    line-height: 0.9;
-  }
-
-  /* Shadows are hard-offset, never blurred. */
-  .mm-shadow {
-    box-shadow: 8px 8px 0 0 var(--mm-black);
-  }
-  .mm-shadow-sm {
-    box-shadow: 4px 4px 0 0 var(--mm-black);
-  }
-  .mm-shadow-lift {
-    box-shadow: 8px 8px 0 0 var(--mm-black);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .mm-shadow-lift:hover {
-    box-shadow: 12px 12px 0 0 var(--mm-black);
-    transform: translate(-4px, -4px);
-  }
-  /* Cards press into the page instead of lifting off it. */
-  .mm-press {
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .mm-press:hover {
-    transform: translate(4px, 4px);
-    box-shadow: none !important;
+    letter-spacing: 0.01em;
+    line-height: 0.92;
   }
 
   /*
-   * Brand photo grade: saturation pushed, mid-tones warm, blacks crushed.
+   * Poster chip: white-stroked rounded panel with the red glow the team
+   * match-up chips carry on the FINALS poster.
    */
-  .mm-photo {
-    filter: saturate(1.28) contrast(1.12) brightness(0.98) sepia(0.08);
+  .afl-chip {
+    border: 3px solid var(--afl-white);
+    border-radius: var(--radius);
+    box-shadow: 0 0 22px rgba(232, 16, 28, 0.45);
+  }
+
+  .afl-glow {
+    box-shadow: 0 0 22px rgba(232, 16, 28, 0.45);
+  }
+
+  .afl-glow-strong {
+    box-shadow: 0 0 34px rgba(232, 16, 28, 0.7);
+  }
+
+  /*
+   * Red duotone photo treatment from the FINALS poster: photography reads
+   * as deep-red texture, not full colour.
+   */
+  .duo-red {
+    filter: grayscale(1) sepia(1) hue-rotate(-42deg) saturate(3.6) brightness(0.62) contrast(1.25);
   }
 
   .no-scrollbar::-webkit-scrollbar {

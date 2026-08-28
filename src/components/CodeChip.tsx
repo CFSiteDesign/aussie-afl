@@ -34,10 +34,10 @@ const CodeChip = ({ size = 'sm' }: CodeChipProps) => {
       type="button"
       onClick={copy}
       aria-label={copied ? `Copied code ${AUSSIES_IN_CODE}` : `Copy code ${AUSSIES_IN_CODE}`}
-      className={`group inline-flex items-center gap-2 border-[var(--mm-black)] bg-[var(--mm-yellow)] font-black uppercase tracking-tight text-[var(--mm-black)] transition-transform hover:-translate-y-0.5 ${
+      className={`group inline-flex items-center gap-2 bg-[var(--afl-red)] font-black uppercase tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 ${
         isLarge
-          ? 'mm-shadow border-4 px-5 py-3 text-2xl md:px-8 md:py-4 md:text-4xl'
-          : 'mm-shadow-sm my-0.5 mr-1.5 border-2 px-1.5 py-0 align-middle text-[0.95em]'
+          ? 'afl-chip afl-glow-strong px-6 py-3 text-2xl md:px-9 md:py-4 md:text-4xl'
+          : 'my-0.5 rounded-md px-2 py-0.5 align-middle text-[0.9em]'
       }`}
     >
       {AUSSIES_IN_CODE}
@@ -45,7 +45,7 @@ const CodeChip = ({ size = 'sm' }: CodeChipProps) => {
         <Check className={isLarge ? 'h-6 w-6' : 'h-3.5 w-3.5'} aria-hidden="true" />
       ) : (
         <Copy
-          className={`${isLarge ? 'h-6 w-6' : 'h-3.5 w-3.5'} opacity-50 transition-opacity group-hover:opacity-100`}
+          className={`${isLarge ? 'h-6 w-6' : 'h-3.5 w-3.5'} opacity-60 transition-opacity group-hover:opacity-100`}
           aria-hidden="true"
         />
       )}

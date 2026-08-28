@@ -19,39 +19,26 @@ Aussies In can share a single link across their group chats and socials.
 In table and lets Aussies In track bookings. The Ha Giang Loop package is the one exception: it is
 attributed to Aussies In already.
 
-## Brand system
+## Design system — the campaign posters
 
-Built to the Mad Monkey poster system. The rules below are load-bearing — read before changing
-anything visual.
+The page is styled to the two AFL Grand Final campaign posters (FINALS and GRAND FINAL
+LIVE + LOUD from the Canva folder), not to the general Mad Monkey poster rules.
 
-**Colour.** Only the eight canonical poster colours, max two or three per composition. This page
-runs **yellow `#ffc000` + green `#03ff01`** on the **Mad Black `#0a0a0a` / Bone `#f5efe2` / Paper
-`#ffffff`** anchors. Every value is a CSS custom property in
-[`src/index.css`](src/index.css) (`--mm-yellow`, `--mm-green`, …); the full palette is declared
-there, so reaching for another colour means using a token that already exists, not inventing one.
+**Colour.** Deep maroon world (`--afl-maroon-deep` `#3f080b`, `--afl-maroon` `#5c0d12`), bright
+AFL red `#e8101c` for display type and CTAs, ice mint `#b8f3e6` for the GRAND FINAL display,
+white for chips and body. All declared as CSS custom properties in [`src/index.css`](src/index.css).
 
-**Type.** Montserrat only. 900/Black uppercase for display (`.font-display`), 400–600 sentence-case
-for body. Bungee is reserved for "WINNER"-style sticker accents and is not loaded here.
+**Type.** Anton for display (`.font-display` — the posters' condensed caps), Montserrat 400–600
+for body.
 
-**Shadows.** Hard-offset, never blurred — `.mm-shadow` (8px), `.mm-shadow-sm` (4px),
-`.mm-shadow-lift` (lifts on hover), `.mm-press` (presses in on hover). No `blur`, no `drop-shadow`.
+**Devices.**
 
-**Radius.** `0px` everywhere. The only rounded shape is the pill speech-bubble, which is a brand
-device, not a rounded box.
-
-**Brand devices** live in [`src/components/brand/`](src/components/brand) — one to three per
-layout:
-
-- `AllInSticker` — the ALL IN mark, always slapped on at a tilt. The artwork is white-on-black, so
-  it needs a dark or mid-tone ground; do not invert it.
-- `Starburst` — spiky burst, generated from a point count.
-- `SpeechBubble` — pill bubble with a tail.
-- `Wordmark` / `CornerWordmark` — the Mad Monkey mark, bottom-right of every full-frame section at
-  ~130px with a 48px safe area. Non-negotiable.
-
-**Photography.** Faces, motion, sun — no empty landscapes, no posed corporate shots, no stock.
-Every photo carries `.mm-photo`, which pushes saturation, warms the mid-tones and crushes the
-blacks. See Asset provenance below for where these particular images came from.
+- `.afl-chip` — white-stroked rounded panel with the red glow from the poster's match-up chips.
+  Photos sit full-colour inside white chips, the way the team badges do on the FINALS poster.
+- `.duo-red` — the red duotone photo treatment; used on the hero and background textures.
+- The AFL logo (top-centre of the hero, bottom-left of the footer) and the ALL IN sticker
+  (bottom-right of the hero), placed as they are on the posters.
+- The marquee separator is the poster's red "V" mark.
 
 ## Adding a location as it goes live
 
@@ -76,14 +63,15 @@ to the front of the grid and shows an **On sale** badge. Run `npm test` afterwar
 
 ## Asset provenance
 
-**Brand marks are genuine.** `mad-monkey-wordmark.png` and `all-in-sticker.png` are the real Mad
-Monkey assets.
+**Brand marks are genuine.** `mm-logo-on-dark.webp` (the monkey-head lockup), `mm-head-white.png`
+and `all-in-sticker.png` are the real Mad Monkey assets. `afl-logo.svg` is the official AFL logo (via Wikipedia), used at the client's
+direction to match the campaign posters.
 
-**Photography is generated** (Higgsfield, GPT Image 2) and purpose-shot for this page: the Grand
-Final screening, the Ha Giang convoy, the parmi, the green-and-gold crowd. The Mad Monkey library
-has no AFL photography at all — no screening, no parmi, no green and gold — so real brand shots
-were tried here and pulled: a bikini pool party and a sunset stroll do not read as an AFL Grand
-Final page. Replace these the moment real AFL event photography exists.
+**Photography.** The Ha Giang Loop image (`ha-giang.jpg`) is real Mad Monkey Ha Giang tour
+photography. The hero (`afl-hero.jpg`) and the events-section crowd texture (`crowd.jpg`) are
+generated (Higgsfield, GPT Image 2), purpose-shot for this page — the Mad Monkey library has no
+AFL screening photography. Both run under the red duotone, where they read as campaign texture.
+Replace them the moment real AFL event photography exists.
 
 The two floating cutouts (`footy-cutout.png`, `beer-cutout.png`) are generated props serving as the
 photo-cutout device.

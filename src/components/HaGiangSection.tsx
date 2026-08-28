@@ -1,8 +1,6 @@
 import { Beer, Bike, Users } from 'lucide-react'
 import haGiangImage from '@/assets/ha-giang.jpg'
 import FloatingProp from '@/components/FloatingProps'
-import Starburst from '@/components/brand/Starburst'
-import { CornerWordmark } from '@/components/brand/Wordmark'
 import { HA_GIANG_DATE, HA_GIANG_URL } from '@/data/events'
 
 const INCLUSIONS = [
@@ -11,47 +9,34 @@ const INCLUSIONS = [
   { icon: Users, text: 'You ride out with the crew you watched the game with' },
 ]
 
+/** The hero package — first section under the hero, per the brief. */
 const HaGiangSection = () => (
-  <section
-    id="ha-giang"
-    className="relative border-b-4 border-[var(--mm-black)] bg-[var(--mm-black)] py-16 pb-24 md:py-24 md:pb-32"
-  >
+  <section id="ha-giang" className="relative bg-[var(--afl-maroon)] py-16 pb-24 md:py-24 md:pb-28">
     <FloatingProp name="footy" rotate={-14} className="-top-14 right-6 hidden w-28 lg:block xl:w-32" />
 
     <div className="mx-auto max-w-7xl px-5 md:px-12">
       {/* Heading */}
-      <div className="mb-10 flex flex-wrap items-start justify-between gap-6 md:mb-14">
-        <div>
-          <h2 className="font-display text-[clamp(2.2rem,7vw,5.2rem)] text-[var(--mm-paper)]">
-            The Ha Giang
-            <br />
-            Loop package
-          </h2>
-          <p className="mt-4 text-base font-black uppercase tracking-tight text-[var(--mm-green)] md:text-xl">
-            Departs {HA_GIANG_DATE}
-          </p>
-        </div>
-
-        <Starburst
-          className="h-24 w-24 shrink-0 md:h-32 md:w-32"
-          fill="var(--mm-yellow)"
-          points={13}
-        >
-          <span className="max-w-[62%] text-[0.5rem] leading-[1.15] text-[var(--mm-black)] md:text-[0.65rem]">
-            Aussies In
-            <br />
-            only
-          </span>
-        </Starburst>
+      <div className="mb-10 text-center md:mb-14">
+        <span className="afl-chip inline-block bg-[var(--afl-white)] px-4 py-1.5 text-[0.65rem] font-black uppercase tracking-widest text-[var(--afl-maroon-deep)] md:text-xs">
+          Exclusive to Aussies In
+        </span>
+        <h2 className="font-display mt-6 text-[clamp(2.6rem,8vw,6rem)] text-[var(--afl-red)] drop-shadow-[0_0_30px_rgba(232,16,28,0.45)]">
+          The Ha Giang
+          <br />
+          Loop package
+        </h2>
+        <p className="font-display mt-4 text-[clamp(1rem,3vw,1.5rem)] tracking-[0.08em] text-[var(--afl-mint)]">
+          Departs {HA_GIANG_DATE}
+        </p>
       </div>
 
       <div className="grid items-stretch gap-7 lg:grid-cols-2 lg:gap-10">
-        {/* Photo */}
-        <div className="mm-shadow border-4 border-[var(--mm-black)]">
+        {/* Photo — full colour inside a white poster chip, like the team badges */}
+        <div className="afl-chip overflow-hidden bg-[var(--afl-white)] p-2 md:p-2.5">
           <img
             src={haGiangImage}
-            alt="A convoy of Easy Rider motorbikes carrying backpackers along a winding mountain pass on the Ha Giang Loop, one trailing a green and gold flag"
-            className="mm-photo h-64 w-full object-cover object-center sm:h-96 lg:h-[620px]"
+            alt="Mad Monkey riders on the Ha Giang Loop — a passenger in a Ha Giang helmet grins back at the camera as the convoy winds through the karst mountains"
+            className="h-64 w-full rounded-[10px] object-cover sm:h-96 lg:h-full"
             width={1344}
             height={752}
             loading="lazy"
@@ -59,8 +44,8 @@ const HaGiangSection = () => (
         </div>
 
         {/* Detail */}
-        <div className="mm-shadow flex flex-col border-4 border-[var(--mm-black)] bg-[var(--mm-paper)] p-6 md:p-9">
-          <p className="text-base font-medium leading-relaxed text-[var(--mm-black)] md:text-xl">
+        <div className="afl-chip flex flex-col bg-[var(--afl-white)] p-6 text-[var(--afl-maroon-deep)] md:p-9">
+          <p className="text-base font-medium leading-relaxed md:text-xl">
             Watch the AFL Grand Final on the 26th in Hanoi with your new Aussie mates, enjoy the
             unlimited drinks package, then head off together on a 4D/3N Ha Giang Loop adventure.
           </p>
@@ -68,16 +53,16 @@ const HaGiangSection = () => (
           <ul className="mt-7 space-y-4 md:mt-9">
             {INCLUSIONS.map(({ icon: Icon, text }) => (
               <li key={text} className="flex items-start gap-3">
-                <span className="mt-0.5 shrink-0 border-2 border-[var(--mm-black)] bg-[var(--mm-green)] p-1.5">
-                  <Icon className="h-4 w-4 text-[var(--mm-black)] md:h-5 md:w-5" aria-hidden="true" />
+                <span className="mt-0.5 shrink-0 rounded-md bg-[var(--afl-red)] p-1.5">
+                  <Icon className="h-4 w-4 text-[var(--afl-white)] md:h-5 md:w-5" aria-hidden="true" />
                 </span>
-                <span className="text-sm font-semibold text-[var(--mm-black)] md:text-lg">{text}</span>
+                <span className="text-sm font-semibold md:text-lg">{text}</span>
               </li>
             ))}
           </ul>
 
-          <div className="mt-7 border-4 border-[var(--mm-black)] bg-[var(--mm-green)] p-4 md:mt-9">
-            <p className="text-sm font-semibold text-[var(--mm-black)] md:text-base">
+          <div className="mt-7 rounded-[10px] bg-[var(--afl-mint)] p-4 md:mt-9">
+            <p className="text-sm font-semibold md:text-base">
               <strong className="font-black uppercase">No code needed.</strong> This one is
               attributed to Aussies In already, so the booking tracks itself.
             </p>
@@ -87,15 +72,13 @@ const HaGiangSection = () => (
             href={HA_GIANG_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mm-shadow-lift mt-7 block border-4 lg:mt-auto border-[var(--mm-black)] bg-[var(--mm-yellow)] px-5 py-4 text-center text-sm font-black uppercase leading-tight tracking-tight text-[var(--mm-black)] md:py-5 md:text-lg"
+            className="afl-chip afl-glow-strong mt-7 block bg-[var(--afl-red)] px-5 py-4 text-center text-sm font-black uppercase leading-tight tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-lg lg:mt-auto"
           >
             Book the Aussies In Ha Giang Loop
           </a>
         </div>
       </div>
     </div>
-
-    <CornerWordmark tone="light" />
   </section>
 )
 

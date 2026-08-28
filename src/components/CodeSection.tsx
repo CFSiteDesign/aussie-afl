@@ -1,14 +1,11 @@
+import allInSticker from '@/assets/all-in-sticker.png'
 import CodeChip from '@/components/CodeChip'
 import FloatingProp from '@/components/FloatingProps'
-import AllInSticker from '@/components/brand/AllInSticker'
-import { CornerWordmark } from '@/components/brand/Wordmark'
 import { HA_GIANG_URL } from '@/data/events'
 
+/** The brief's code note: the AUSSIESIN reminder, on the poster's mint. */
 const CodeSection = () => (
-  <section
-    id="code"
-    className="relative border-b-4 border-[var(--mm-black)] bg-[var(--mm-green)] py-16 pb-24 md:py-24 md:pb-32"
-  >
+  <section id="code" className="relative bg-[var(--afl-mint)] py-16 pb-20 text-[var(--afl-maroon-deep)] md:py-24">
     <FloatingProp
       name="footy"
       rotate={18}
@@ -17,11 +14,11 @@ const CodeSection = () => (
     />
 
     <div className="mx-auto max-w-4xl px-5 text-center md:px-12">
-      <p className="text-[0.7rem] font-black uppercase tracking-[0.35em] text-[var(--mm-black)] md:text-xs">
+      <p className="text-[0.7rem] font-black uppercase tracking-[0.35em] md:text-xs">
         Do not forget this bit
       </p>
 
-      <h2 className="font-display mt-5 text-[clamp(2.2rem,7.5vw,5.4rem)] text-[var(--mm-black)]">
+      <h2 className="font-display mt-5 text-[clamp(2.4rem,7.5vw,5.4rem)] text-[var(--afl-red)]">
         Put this in
         <br />
         at checkout
@@ -31,28 +28,32 @@ const CodeSection = () => (
         <CodeChip size="lg" />
       </div>
 
-      <p className="mx-auto mt-8 max-w-2xl text-base font-semibold leading-relaxed text-[var(--mm-black)] md:mt-10 md:text-xl">
+      <p className="mx-auto mt-8 max-w-2xl text-base font-semibold leading-relaxed md:mt-10 md:text-xl">
         Add it to any AFL Grand Final ticket and you are on an Aussies In table. It is also how
         Aussies In sees who is coming, so nobody turns up to a room full of strangers.
       </p>
 
-      <p className="mx-auto mt-6 max-w-2xl border-4 border-[var(--mm-black)] p-4 text-sm font-semibold text-[var(--mm-black)] md:text-base">
+      <p className="mx-auto mt-6 max-w-2xl rounded-[var(--radius)] border-[3px] border-[var(--afl-maroon-deep)] p-4 text-sm font-semibold md:text-base">
         One exception:{' '}
         <a
           href={HA_GIANG_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-black underline decoration-4 underline-offset-4"
+          className="font-black text-[var(--afl-red)] underline decoration-2 underline-offset-4"
         >
           the Ha Giang Loop package
         </a>{' '}
         is already attributed to Aussies In. No code there.
       </p>
 
-      <AllInSticker className="mx-auto mt-10 w-28 md:mt-14 md:w-36" rotate={-6} />
+      <img
+        src={allInSticker}
+        alt="ALL IN"
+        className="mx-auto mt-10 w-28 -rotate-6 select-none md:mt-14 md:w-36"
+        draggable={false}
+        loading="lazy"
+      />
     </div>
-
-    <CornerWordmark tone="dark" />
   </section>
 )
 

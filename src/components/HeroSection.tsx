@@ -1,83 +1,88 @@
 import heroImage from '@/assets/afl-hero.jpg'
+import aflLogo from '@/assets/afl-logo.svg'
+import allInSticker from '@/assets/all-in-sticker.png'
+import mmHead from '@/assets/mm-head-white.png'
 import CodeChip from '@/components/CodeChip'
-import AllInSticker from '@/components/brand/AllInSticker'
 import SpeechBubble from '@/components/brand/SpeechBubble'
-import { CornerWordmark } from '@/components/brand/Wordmark'
-import { GRAND_FINAL_DATE, HA_GIANG_URL } from '@/data/events'
+import { HA_GIANG_URL } from '@/data/events'
 
+/**
+ * Hero, built to the GRAND FINAL campaign poster: AFL logo top-centre, giant
+ * mint display type over red-duotone crowd photography, everything centred.
+ */
 const HeroSection = () => (
-  <section className="relative border-b-4 border-[var(--mm-black)] bg-[var(--mm-black)]">
-    {/* Backdrop */}
+  <section className="relative overflow-hidden">
+    {/* Red-duotone backdrop, per the FINALS poster treatment */}
     <div className="absolute inset-0">
       <img
         src={heroImage}
-        alt="Australian backpackers in green and gold cheering at the AFL Grand Final on a big screen in a Mad Monkey rooftop bar in South East Asia"
-        className="mm-photo h-full w-full object-cover object-[42%_center]"
+        alt=""
+        aria-hidden="true"
+        className="duo-red h-full w-full object-cover object-[42%_center]"
         width={1344}
         height={752}
         decoding="async"
         // React 18 does not map the camelCase prop, so pass the DOM attribute.
         {...{ fetchpriority: 'high' }}
       />
-      {/* Weighted left so the display type always lands on solid ground. */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--mm-black)] via-[var(--mm-black)]/85 to-[var(--mm-black)]/35" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--afl-maroon-deep)]/80 via-[var(--afl-maroon-deep)]/45 to-[var(--afl-maroon-deep)]" />
     </div>
 
-    <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col px-5 py-7 md:min-h-0 md:px-12 md:py-12 lg:py-16">
-      {/* Partner lockup */}
-      <div className="flex flex-wrap items-center gap-3">
-        <span className="border-4 border-[var(--mm-paper)] bg-[var(--mm-black)] px-3 py-1.5 text-xs font-black uppercase tracking-tight text-[var(--mm-paper)] md:text-sm">
-          Mad Monkey
-        </span>
-        <span className="text-lg font-black text-[var(--mm-paper)]">×</span>
-        <span className="border-4 border-[var(--mm-black)] bg-[var(--mm-yellow)] px-3 py-1.5 text-xs font-black uppercase tracking-tight text-[var(--mm-black)] md:text-sm">
-          Aussies In
-        </span>
+    <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center px-5 py-8 text-center md:min-h-0 md:px-10 md:py-14">
+      {/* Presented by */}
+      <p className="flex items-center gap-2.5 text-[0.65rem] font-black uppercase tracking-[0.3em] text-[var(--afl-white)]/85 md:text-xs">
+        <img src={mmHead} alt="" aria-hidden="true" className="h-6 w-6 md:h-7 md:w-7" width={28} height={28} />
+        Mad Monkey <span className="text-[var(--afl-red)]">×</span> Aussies In present
+      </p>
+
+      {/* AFL logo, top-centre as on the poster */}
+      <img
+        src={aflLogo}
+        alt="AFL"
+        className="mt-6 w-28 drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] md:mt-8 md:w-40"
+        width={160}
+        height={107}
+      />
+
+      {/* Display block */}
+      <h1 className="font-display mt-6 text-[var(--afl-mint)] md:mt-8">
+        <span className="block text-[clamp(4rem,17vw,11rem)]">Grand</span>
+        <span className="block text-[clamp(4rem,17vw,11rem)]">Final</span>
+      </h1>
+      <p className="font-display mt-3 text-[clamp(1.3rem,4.5vw,2.4rem)] text-[var(--afl-mint)]">
+        Live + Loud
+      </p>
+      <p className="font-display mt-4 text-[clamp(1rem,3.2vw,1.6rem)] tracking-[0.08em] text-[var(--afl-white)] md:mt-5">
+        Sat 26 September
+      </p>
+
+      <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-[var(--afl-white)]/90 md:mt-8 md:text-lg">
+        Every Mad Monkey Grand Final party across South East Asia, on one page. Find your hostel,
+        grab a ticket, watch the game with your new Aussie mates.
+      </p>
+
+      {/* CTAs */}
+      <div className="mt-8 flex w-full max-w-xl flex-col gap-4 sm:flex-row md:mt-10">
+        <a
+          href={HA_GIANG_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="afl-chip flex-1 bg-[var(--afl-red)] px-6 py-4 text-sm font-black uppercase tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-base"
+        >
+          Book the Ha Giang Loop
+        </a>
+        <a
+          href="#events"
+          className="afl-chip flex-1 bg-[var(--afl-white)] px-6 py-4 text-sm font-black uppercase tracking-tight text-[var(--afl-maroon-deep)] transition-transform hover:-translate-y-0.5 md:py-5 md:text-base"
+        >
+          Find your event
+        </a>
       </div>
 
-      {/* Headline */}
-      <div className="flex flex-1 flex-col justify-center py-10 md:py-14">
-        <div className="mm-shadow-sm mb-5 w-fit -rotate-2 border-4 border-[var(--mm-black)] bg-[var(--mm-yellow)] px-4 py-2 md:mb-7 md:px-6 md:py-2.5">
-          <span className="text-xs font-black uppercase tracking-tight text-[var(--mm-black)] md:text-lg">
-            {GRAND_FINAL_DATE}
-          </span>
-        </div>
-
-        <h1 className="font-display text-[var(--mm-paper)]">
-          <span className="block text-[clamp(2.7rem,9.5vw,7rem)]">AFL Grand</span>
-          <span className="block text-[clamp(2.7rem,9.5vw,7rem)] text-[var(--mm-yellow)]">Final</span>
-        </h1>
-
-        <p className="mt-6 max-w-xl text-base font-medium leading-relaxed text-[var(--mm-paper)] md:mt-8 md:text-xl">
-          Every Mad Monkey Grand Final party across South East Asia, on one page. Find your hostel,
-          grab a ticket, watch the game with people you have not met yet.
-        </p>
-
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
-          <a
-            href={HA_GIANG_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mm-shadow-lift border-4 border-[var(--mm-black)] bg-[var(--mm-yellow)] px-6 py-4 text-center text-sm font-black uppercase tracking-tight text-[var(--mm-black)] md:px-9 md:py-5 md:text-lg"
-          >
-            Book the Ha Giang Loop
-          </a>
-          <a
-            href="#events"
-            className="mm-shadow-lift border-4 border-[var(--mm-black)] bg-[var(--mm-paper)] px-6 py-4 text-center text-sm font-black uppercase tracking-tight text-[var(--mm-black)] md:px-9 md:py-5 md:text-lg"
-          >
-            Find your event
-          </a>
-
-          {/* Artwork is already white-on-black, so it reads as-is over the photo. */}
-          <AllInSticker className="hidden w-24 self-center lg:block xl:w-28" rotate={-9} />
-        </div>
-      </div>
-
-      {/* Aussies In pill bubble */}
-      <div className="relative pb-12 md:pb-16">
-        <SpeechBubble speaker="Aussies In" className="w-full max-w-xl">
-          <span className="text-sm font-medium leading-[2] text-[var(--mm-black)] md:text-base">
+      {/* Aussies In bubble + code note, per the brief */}
+      <div className="mt-10 w-full max-w-xl pb-6 text-left md:mt-12 md:pb-2">
+        <SpeechBubble speaker="Aussies In" className="w-full">
+          <span className="text-sm font-medium leading-[2] text-[var(--afl-maroon-deep)] md:text-base">
             Oi. Put <CodeChip /> in at checkout so we can sit you on an{' '}
             <strong className="font-black">Aussies In table</strong>.
           </span>
@@ -85,7 +90,13 @@ const HeroSection = () => (
       </div>
     </div>
 
-    <CornerWordmark tone="light" />
+    {/* ALL IN sticker, bottom-right as on the FINALS poster */}
+    <img
+      src={allInSticker}
+      alt="ALL IN"
+      className="absolute bottom-6 right-6 z-20 hidden w-24 -rotate-6 select-none lg:block xl:w-28"
+      draggable={false}
+    />
   </section>
 )
 
