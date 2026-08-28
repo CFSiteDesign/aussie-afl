@@ -1,6 +1,5 @@
 import { Beer, Bike, Users } from 'lucide-react'
 import haGiangImage from '@/assets/ha-giang-2026.jpg.asset.json'
-import FloatingProp from '@/components/FloatingProps'
 import { HA_GIANG_DATE, HA_GIANG_URL } from '@/data/events'
 
 const INCLUSIONS = [
@@ -12,8 +11,6 @@ const INCLUSIONS = [
 /** The hero package — first section under the hero, per the brief. */
 const HaGiangSection = () => (
   <section id="ha-giang" className="relative bg-[var(--afl-maroon)] py-16 pb-24 md:py-24 md:pb-28">
-    <FloatingProp name="footy" rotate={-14} className="-top-14 right-6 hidden w-28 lg:block xl:w-32" />
-
     <div className="mx-auto max-w-7xl px-5 md:px-12">
       {/* Heading */}
       <div className="mb-10 text-center md:mb-14">
