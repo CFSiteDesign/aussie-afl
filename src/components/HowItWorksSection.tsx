@@ -1,28 +1,28 @@
-import crewImage from '@/assets/mm-crew-sunset.jpg'
-import partyImage from '@/assets/mm-boat-party.jpg'
-import matesImage from '@/assets/mm-ha-giang-mates.jpg'
+import poolImage from '@/assets/pool-party.jpg'
+import parmiImage from '@/assets/parmi.jpg'
+import crowdImage from '@/assets/crowd.jpg'
 
 const STEPS = [
   {
     n: '01',
     title: 'Pick your hostel',
     body: 'Find the Mad Monkey you will be at on the 26th. Unlimited drinks, or unlimited drinks and a parmi.',
-    image: crewImage,
-    alt: 'A group of Mad Monkey travellers walking together with drinks at sunset',
+    image: poolImage,
+    alt: 'Travellers around the pool at a Mad Monkey hostel in South East Asia',
   },
   {
     n: '02',
     title: 'Put the code in',
     body: 'AUSSIESIN at checkout. That is what puts you on an Aussies In table instead of on your own.',
-    image: partyImage,
-    alt: 'Travellers dancing with drinks at a Mad Monkey boat party',
+    image: parmiImage,
+    alt: 'A chicken parmigiana with chips and salad beside two cold beers on a bar table',
   },
   {
     n: '03',
     title: 'Turn up. Stay out.',
     body: 'Green and gold, big screen, siren goes, nobody goes home. You will leave with a new crew.',
-    image: matesImage,
-    alt: 'Two Mad Monkey travellers hugging on a viewpoint over the Ha Giang mountains',
+    image: crowdImage,
+    alt: 'A crowd of Australian travellers in green and gold celebrating a goal in a tropical hostel bar',
   },
 ]
 

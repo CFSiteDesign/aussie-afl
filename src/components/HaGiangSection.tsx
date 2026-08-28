@@ -1,5 +1,5 @@
 import { Beer, Bike, Users } from 'lucide-react'
-import haGiangImage from '@/assets/mm-ha-giang-crew.jpg'
+import haGiangImage from '@/assets/ha-giang.jpg'
 import FloatingProp from '@/components/FloatingProps'
 import Starburst from '@/components/brand/Starburst'
 import { CornerWordmark } from '@/components/brand/Wordmark'
@@ -50,10 +50,10 @@ const HaGiangSection = () => (
         <div className="mm-shadow border-4 border-[var(--mm-black)]">
           <img
             src={haGiangImage}
-            alt="A Mad Monkey Ha Giang Loop group crowded together with branded helmets in front of a Vietnamese flag and the mountains"
-            className="mm-photo h-64 w-full object-cover object-bottom sm:h-96 lg:h-[620px]"
-            width={1600}
-            height={2133}
+            alt="A convoy of Easy Rider motorbikes carrying backpackers along a winding mountain pass on the Ha Giang Loop, one trailing a green and gold flag"
+            className="mm-photo h-64 w-full object-cover object-center sm:h-96 lg:h-[620px]"
+            width={1344}
+            height={752}
             loading="lazy"
           />
         </div>

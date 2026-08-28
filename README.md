@@ -49,9 +49,9 @@ layout:
 - `Wordmark` / `CornerWordmark` — the Mad Monkey mark, bottom-right of every full-frame section at
   ~130px with a 48px safe area. Non-negotiable.
 
-**Photography.** Real Mad Monkey photography only — faces, motion, sun. No empty landscapes, no
-posed corporate shots, no stock. Every photo carries `.mm-photo`, which pushes saturation, warms
-the mid-tones and crushes the blacks.
+**Photography.** Faces, motion, sun — no empty landscapes, no posed corporate shots, no stock.
+Every photo carries `.mm-photo`, which pushes saturation, warms the mid-tones and crushes the
+blacks. See Asset provenance below for where these particular images came from.
 
 ## Adding a location as it goes live
 
@@ -76,13 +76,17 @@ to the front of the grid and shows an **On sale** badge. Run `npm test` afterwar
 
 ## Asset provenance
 
-The photography in `src/assets/` (`mm-*.jpg`) and the brand marks are real Mad Monkey assets,
-carried over from the ALL IN squad-trips build rather than the brand Drive, which was not reachable
-from the connected Google account.
+**Brand marks are genuine.** `mad-monkey-wordmark.png` and `all-in-sticker.png` are the real Mad
+Monkey assets.
+
+**Photography is generated** (Higgsfield, GPT Image 2) and purpose-shot for this page: the Grand
+Final screening, the Ha Giang convoy, the parmi, the green-and-gold crowd. The Mad Monkey library
+has no AFL photography at all — no screening, no parmi, no green and gold — so real brand shots
+were tried here and pulled: a bikini pool party and a sunset stroll do not read as an AFL Grand
+Final page. Replace these the moment real AFL event photography exists.
 
 The two floating cutouts (`footy-cutout.png`, `beer-cutout.png`) are generated props serving as the
-photo-cutout device — there is no AFL ball anywhere in the Mad Monkey library. Swap them for real
-cutouts if any turn up.
+photo-cutout device.
 
 ## Development
 

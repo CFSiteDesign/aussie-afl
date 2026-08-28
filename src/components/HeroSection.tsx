@@ -1,4 +1,4 @@
-import heroImage from '@/assets/mm-hero-crowd.jpg'
+import heroImage from '@/assets/afl-hero.jpg'
 import CodeChip from '@/components/CodeChip'
 import AllInSticker from '@/components/brand/AllInSticker'
 import SpeechBubble from '@/components/brand/SpeechBubble'
@@ -11,10 +11,10 @@ const HeroSection = () => (
     <div className="absolute inset-0">
       <img
         src={heroImage}
-        alt="Mad Monkey travellers packed together with drinks in the air, shot from below against a bright sky"
-        className="mm-photo h-full w-full object-cover object-[68%_26%]"
-        width={1800}
-        height={1214}
+        alt="Australian backpackers in green and gold cheering at the AFL Grand Final on a big screen in a Mad Monkey rooftop bar in South East Asia"
+        className="mm-photo h-full w-full object-cover object-[42%_center]"
+        width={1344}
+        height={752}
         decoding="async"
         // React 18 does not map the camelCase prop, so pass the DOM attribute.
         {...{ fetchpriority: 'high' }}
