@@ -126,6 +126,15 @@
     box-shadow: 0 0 34px rgba(232, 16, 28, 0.7);
   }
 
+  /* Heavy poster text shadow so mint/white type stays legible over the crowd photo. */
+  .text-shadow-hero {
+    text-shadow: 0 4px 18px rgba(36, 4, 6, 0.85), 0 2px 6px rgba(36, 4, 6, 0.65);
+  }
+
+  .text-shadow-hero-strong {
+    text-shadow: 0 6px 28px rgba(36, 4, 6, 0.95), 0 3px 10px rgba(36, 4, 6, 0.75);
+  }
+
   /*
    * Red duotone photo treatment from the FINALS poster: photography reads
    * as deep-red texture, not full colour.
