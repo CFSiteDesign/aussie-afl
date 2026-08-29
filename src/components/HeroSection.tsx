@@ -2,8 +2,6 @@ import heroImage from '@/assets/afl-hero.jpg'
 import aflLogo from '@/assets/afl-logo.svg'
 import allInSticker from '@/assets/all-in-sticker.png'
 import mmHead from '@/assets/mm-head-white.png'
-import CodeChip from '@/components/CodeChip'
-import SpeechBubble from '@/components/brand/SpeechBubble'
 import { HA_GIANG_URL } from '@/data/events'
 
 /**
