@@ -1,5 +1,5 @@
 import { Beer, Bike, Users } from 'lucide-react'
-import haGiangImage from '@/assets/ha-giang-2026.jpg.asset.json'
+import haGiangImage from '@/assets/ha-giang-2026.jpg'
 import { HA_GIANG_DATE, HA_GIANG_URL } from '@/data/events'
 
 const INCLUSIONS = [
@@ -31,7 +31,7 @@ const HaGiangSection = () => (
         {/* Photo — full colour inside a white poster chip, like the team badges */}
         <div className="afl-chip overflow-hidden bg-[var(--afl-white)] p-2 md:p-2.5">
           <img
-            src={haGiangImage.url}
+            src={haGiangImage}
             alt="Two travellers on an Easy Rider motorbike winding through the green karst mountains of the Ha Giang Loop"
             className="h-64 w-full rounded-[10px] object-cover sm:h-96 lg:h-full"
             width={1344}
