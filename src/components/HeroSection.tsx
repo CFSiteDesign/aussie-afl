@@ -2,8 +2,6 @@ import heroImage from '@/assets/afl-hero.jpg'
 import aflLogo from '@/assets/afl-logo.svg'
 import allInSticker from '@/assets/all-in-sticker.png'
 import mmHead from '@/assets/mm-head-white.png'
-import CodeChip from '@/components/CodeChip'
-import SpeechBubble from '@/components/brand/SpeechBubble'
 import { HA_GIANG_URL } from '@/data/events'
 
 /**
@@ -87,15 +85,6 @@ const HeroSection = () => (
         </a>
       </div>
 
-      {/* Aussies In bubble + code note, per the brief */}
-      <div className="mt-10 w-full max-w-xl pb-6 md:mt-12 md:pb-2">
-        <SpeechBubble speaker="Aussies In" className="w-full">
-          <span className="text-sm font-medium leading-[2] text-[var(--afl-maroon-deep)] md:text-base">
-            Oi. Put <CodeChip /> in at checkout so we know you're{' '}
-            <strong className="font-black">with Aussies In</strong>.
-          </span>
-        </SpeechBubble>
-      </div>
     </div>
 
     {/* ALL IN sticker, bottom-right as on the FINALS poster */}
