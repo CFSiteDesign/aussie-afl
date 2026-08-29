@@ -21,8 +21,8 @@ const CodeSection = () => (
       </div>
 
       <p className="mx-auto mt-8 max-w-2xl text-base font-semibold leading-relaxed md:mt-10 md:text-xl">
-        Add it to any AFL Grand Final ticket and you are on an Aussies In table. It is also how
-        Aussies In sees who is coming, so nobody turns up to a room full of strangers.
+        Add it to any AFL Grand Final ticket so Aussies In sees who is coming — nobody turns up to a
+        room full of strangers.
       </p>
 
       <p className="mx-auto mt-6 max-w-2xl rounded-[var(--radius)] border-[3px] border-[var(--afl-maroon-deep)] p-4 text-sm font-semibold md:text-base">

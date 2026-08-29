@@ -2,7 +2,7 @@ import { AUSSIES_IN_CODE } from '@/data/events'
 
 const MESSAGES = [
   `Code ${AUSSIES_IN_CODE} at checkout`,
-  'Sit on an Aussies In table',
+  'Tagged as Aussies In',
   'One link. Every AFL event.',
   '26 September. All in.',
 ]
