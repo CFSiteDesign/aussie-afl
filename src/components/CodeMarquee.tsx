@@ -1,4 +1,3 @@
-import { AUSSIES_IN_CODE } from '@/data/events'
 
 const MESSAGES = [
   'Tagged as Aussies In',
