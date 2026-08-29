@@ -1,5 +1,5 @@
 import { Beer, Bike, Users } from 'lucide-react'
-import haGiangImage from '@/assets/ha-giang-2026.jpg.asset.json'
+import haGiangImage from '@/assets/ha-giang-2026.jpg'
 import { HA_GIANG_DATE, HA_GIANG_URL } from '@/data/events'
 
 const INCLUSIONS = [
