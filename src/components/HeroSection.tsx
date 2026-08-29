@@ -34,7 +34,7 @@ const HeroSection = () => (
       />
     </div>
 
-    <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center px-5 py-8 text-center md:min-h-0 md:px-10 md:py-14">
+    <div className="relative z-10 mx-auto flex min-h-[78svh] max-w-5xl flex-col items-center justify-center px-5 py-10 text-center md:min-h-0 md:px-10 md:py-14">
       {/* Presented by */}
       <p className="text-shadow-hero flex items-center gap-2.5 text-[0.65rem] font-black uppercase tracking-[0.3em] text-[var(--afl-white)] md:text-xs">
         <img src={mmHead} alt="" aria-hidden="true" className="h-6 w-6 md:h-7 md:w-7" width={28} height={28} />
