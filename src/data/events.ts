@@ -67,11 +67,31 @@ export const LOCATIONS: Location[] = [
     ],
   },
   { id: 'bangkok', city: 'Bangkok', country: 'Thailand', tickets: [] },
-  { id: 'chiang-mai', city: 'Chiang Mai', country: 'Thailand', tickets: [] },
+  {
+    id: 'chiang-mai',
+    city: 'Chiang Mai',
+    country: 'Thailand',
+    tickets: [
+      {
+        label: 'AFL Grand Final Ticket',
+        url: 'https://madmonkeyhostels.com/tours-events/afl-grand-final-mad-monkey-chiang-mai',
+      },
+    ],
+  },
   { id: 'pai', city: 'Pai', country: 'Thailand', tickets: [] },
   { id: 'siem-reap', city: 'Siem Reap', country: 'Cambodia', tickets: [] },
   { id: 'phnom-penh', city: 'Phnom Penh', country: 'Cambodia', tickets: [] },
-  { id: 'luang-prabang', city: 'Luang Prabang', country: 'Laos', tickets: [] },
+  {
+    id: 'luang-prabang',
+    city: 'Luang Prabang',
+    country: 'Laos',
+    tickets: [
+      {
+        label: 'AFL Grand Final Tickets',
+        url: 'https://madmonkeyhostels.com/tours-events?filtername=luang-prabang',
+      },
+    ],
+  },
   { id: 'vang-vieng', city: 'Vang Vieng', country: 'Laos', tickets: [] },
   { id: 'manila', city: 'Manila', country: 'Philippines', tickets: [] },
 ]

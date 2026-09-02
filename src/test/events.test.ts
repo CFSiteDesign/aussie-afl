@@ -23,9 +23,7 @@ describe('AFL Grand Final line-up', () => {
     )
   })
 
-  it('has Vietnam on sale with both ticket types and nothing else yet', () => {
-    expect(LOCATIONS.filter(isLive).map((l) => l.city)).toEqual(['Hanoi', 'Hoi An'])
-
+  it('has Vietnam on sale with both ticket types', () => {
     for (const city of ['Hanoi', 'Hoi An']) {
       const location = LOCATIONS.find((l) => l.city === city)!
       expect(location.tickets.map((t) => t.label)).toEqual([
