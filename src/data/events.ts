@@ -66,7 +66,17 @@ export const LOCATIONS: Location[] = [
       },
     ],
   },
-  { id: 'bangkok', city: 'Bangkok', country: 'Thailand', tickets: [] },
+  {
+    id: 'bangkok',
+    city: 'Bangkok',
+    country: 'Thailand',
+    tickets: [
+      {
+        label: 'AFL Grand Final Ticket',
+        url: 'https://madmonkeyhostels.com/tours-events/afl-grand-final-mad-monkey-bangkok',
+      },
+    ],
+  },
   {
     id: 'chiang-mai',
     city: 'Chiang Mai',
@@ -79,8 +89,28 @@ export const LOCATIONS: Location[] = [
     ],
   },
   { id: 'pai', city: 'Pai', country: 'Thailand', tickets: [] },
-  { id: 'siem-reap', city: 'Siem Reap', country: 'Cambodia', tickets: [] },
-  { id: 'phnom-penh', city: 'Phnom Penh', country: 'Cambodia', tickets: [] },
+  {
+    id: 'siem-reap',
+    city: 'Siem Reap',
+    country: 'Cambodia',
+    tickets: [
+      {
+        label: 'AFL Grand Final Ticket',
+        url: 'https://madmonkeyhostels.com/tours-events/afl-grand-final-mad-monkey-siem-reap',
+      },
+    ],
+  },
+  {
+    id: 'phnom-penh',
+    city: 'Phnom Penh',
+    country: 'Cambodia',
+    tickets: [
+      {
+        label: 'AFL Grand Final Ticket',
+        url: 'https://madmonkeyhostels.com/tours-events/afl-grand-final-mad-monkey-phnom-penh',
+      },
+    ],
+  },
   {
     id: 'luang-prabang',
     city: 'Luang Prabang',
@@ -92,8 +122,39 @@ export const LOCATIONS: Location[] = [
       },
     ],
   },
-  { id: 'vang-vieng', city: 'Vang Vieng', country: 'Laos', tickets: [] },
-  { id: 'manila', city: 'Manila', country: 'Philippines', tickets: [] },
+  {
+    id: 'vang-vieng',
+    city: 'Vang Vieng',
+    country: 'Laos',
+    tickets: [
+      {
+        label: 'AFL Grand Final Ticket',
+        url: 'https://madmonkeyhostels.com/tours-events/afl-grand-final-mad-monkey-vang-vieng',
+      },
+    ],
+  },
+  {
+    id: 'manila',
+    city: 'Manila',
+    country: 'Philippines',
+    tickets: [
+      {
+        label: 'AFL Grand Final Ticket',
+        url: 'https://madmonkeyhostels.com/tours-events/afl-grand-final-mad-monkey-manila',
+      },
+    ],
+  },
+  {
+    id: 'siargao',
+    city: 'Siargao',
+    country: 'Philippines',
+    tickets: [
+      {
+        label: 'AFL Grand Final Ticket',
+        url: 'https://madmonkeyhostels.com/tours-events/afl-grand-final-mad-monkey-siargao',
+      },
+    ],
+  },
 ]
 
 export const isLive = (location: Location) => location.tickets.some((t) => t.url !== null)
