@@ -1,14 +1,15 @@
-import { Beer, Bike, Users } from 'lucide-react'
+import { Beer, Bike, Bus, Users } from 'lucide-react'
 import haGiangImage from '@/assets/ha-giang-2026.jpg'
 import { HA_GIANG_DATE, HA_GIANG_URL } from '@/data/events'
 
 const INCLUSIONS = [
   { icon: Beer, text: 'Unlimited drinks on Grand Final night in Hanoi' },
   { icon: Bike, text: '4 days, 3 nights, one Easy Rider loop through Ha Giang' },
+  { icon: Bus, text: 'VIP cabin bus tickets from Hanoi and back' },
   { icon: Users, text: 'You ride out with the crew you watched the game with' },
 ]
 
-/** The hero package — first section under the hero, per the brief. */
+/** The hero package - first section under the hero, per the brief. */
 const HaGiangSection = () => (
   <section id="ha-giang" className="relative bg-[var(--afl-maroon)] py-16 pb-24 md:py-24 md:pb-28">
     <div className="mx-auto max-w-7xl px-5 md:px-12">
@@ -28,7 +29,7 @@ const HaGiangSection = () => (
       </div>
 
       <div className="grid items-stretch gap-7 lg:grid-cols-2 lg:gap-10">
-        {/* Photo — full colour inside a white poster chip, like the team badges */}
+        {/* Photo - full colour inside a white poster chip, like the team badges */}
         <div className="afl-chip overflow-hidden bg-[var(--afl-white)] p-2 md:p-2.5">
           <img
             src={haGiangImage}

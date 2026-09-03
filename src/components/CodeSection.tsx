@@ -2,18 +2,18 @@ import allInSticker from '@/assets/all-in-sticker.png'
 import CodeChip from '@/components/CodeChip'
 import { HA_GIANG_URL } from '@/data/events'
 
-/** The brief's code note: the AUSSIESIN reminder, on the poster's mint. */
+/** The code note: every ticket link carries AUSSIESIN already, so this reassures rather than instructs. */
 const CodeSection = () => (
   <section id="code" className="relative bg-[var(--afl-mint)] py-16 pb-20 text-[var(--afl-maroon-deep)] md:py-24">
     <div className="mx-auto max-w-4xl px-5 text-center md:px-12">
       <p className="text-[0.7rem] font-black uppercase tracking-[0.35em] md:text-xs">
-        Do not forget this bit
+        Nothing to type
       </p>
 
       <h2 className="font-display mt-5 text-[clamp(2.4rem,7.5vw,5.4rem)] text-[var(--afl-red)]">
-        Put this in
+        Your code is
         <br />
-        at checkout
+        built in
       </h2>
 
       <div className="mt-8 flex justify-center md:mt-10">
@@ -21,8 +21,9 @@ const CodeSection = () => (
       </div>
 
       <p className="mx-auto mt-8 max-w-2xl text-base font-semibold leading-relaxed md:mt-10 md:text-xl">
-        Add it to any AFL Grand Final ticket so Aussies In sees who is coming — nobody turns up to a
-        room full of strangers.
+        Every ticket link on this page already carries the Aussies In code, so booking through
+        it puts you on an Aussies In table and lets the crew see who is coming. If a link ever
+        drops it, the code above goes in at checkout.
       </p>
 
       <p className="mx-auto mt-6 max-w-2xl rounded-[var(--radius)] border-[3px] border-[var(--afl-maroon-deep)] p-4 text-sm font-semibold md:text-base">
@@ -35,7 +36,7 @@ const CodeSection = () => (
         >
           the Ha Giang Loop package
         </a>{' '}
-        is already attributed to Aussies In. No code there.
+        is attributed to Aussies In on its own. No code there either.
       </p>
 
       <img

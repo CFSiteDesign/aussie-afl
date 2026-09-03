@@ -7,17 +7,16 @@ Aussies In can share a single link across their group chats and socials.
 
 | Section | Purpose |
 | --- | --- |
-| Hero | Grand Final date, the Aussies In speech bubble, and the `AUSSIESIN` code |
+| Hero | AFL logo, Grand Final date, the two calls to action |
 | Ha Giang Loop | The hero package, exclusive to Aussies In — no code needed |
-| Pick your spot | Searchable, country-filtered grid of every participating hostel |
-| How it works | Three steps, ending on the code reminder |
-| Code callout | The `AUSSIESIN` checkout reminder, click-to-copy |
+| AFL Grand Final events | Searchable, country-filtered grid of every participating hostel |
+| Code note | Reassurance that `AUSSIESIN` is already built into every link |
 
 **Dates:** Grand Final is Saturday 26 September; the Ha Giang Loop departs Sunday 27 September.
 
-**The code:** `AUSSIESIN` goes in at checkout on every event ticket — it seats guests at an Aussies
-In table and lets Aussies In track bookings. The Ha Giang Loop package is the one exception: it is
-attributed to Aussies In already.
+**The code:** every ticket link carries `coupon=AUSSIESIN` pre-embedded — it seats guests at an
+Aussies In table and lets Aussies In track bookings without anyone typing it. The Ha Giang Loop
+package is attributed to Aussies In on its own.
 
 ## Design system — the campaign posters
 
@@ -40,26 +39,23 @@ for body.
   (bottom-right of the hero), placed as they are on the posters.
 - The marquee separator is the poster's red "V" mark.
 
-## Adding a location as it goes live
+## Updating the line-up
 
-All content lives in [`src/data/events.ts`](src/data/events.ts) — no component edits needed. Find
-the location and fill in its ticket URLs:
+All content lives in [`src/data/events.ts`](src/data/events.ts) — no component edits needed. Ticket
+URLs come from Mad Monkey's **TRACKER FOR AFL FINAL** sheet (column F, "LINK WITH AUSSIESIN CODE
+EMBEDDED"). Copy the link across but **drop the `cart_id` parameter** — that is the checkout session
+of whoever generated the link, not something to share. Pai is the only location the tracker still
+marks as not live; drop its link in when it lands:
 
 ```ts
-{
-  id: 'bangkok',
-  city: 'Bangkok',
-  country: 'Thailand',
-  tickets: [
-    { label: 'Unlimited Drinks + Parmi', url: 'https://madmonkeyhostels.com/tours-events/...' },
-    { label: 'Unlimited Drinks', url: 'https://madmonkeyhostels.com/tours-events/...' },
-  ],
-},
+{ id: 'pai', city: 'Pai', country: 'Thailand', tickets: [
+  { label: 'AFL Grand Final Ticket', url: 'https://madmonkeyhostels.com/booking?type=tours&prodid=...&coupon=AUSSIESIN' },
+] },
 ```
 
-A location with no ticket URLs renders as **Coming soon**; as soon as one URL lands, the card moves
-to the front of the grid and shows an **On sale** badge. Run `npm test` afterwards — the suite in
-`src/test/events.test.ts` checks the line-up against the brief.
+A location with no ticket URLs renders as **Coming soon**; once a URL lands, the card moves to the
+front of the grid with an **On sale** badge. Run `npm test` afterwards — `src/test/events.test.ts`
+checks every link still carries the code and no cart session.
 
 ## Asset provenance
 

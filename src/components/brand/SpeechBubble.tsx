@@ -6,7 +6,7 @@ type SpeechBubbleProps = {
 }
 
 /**
- * Pill speech-bubble from the brief — white chip on the maroon poster world,
+ * Pill speech-bubble from the brief - white chip on the maroon poster world,
  * with the red glow the poster chips carry.
  */
 const SpeechBubble = ({ children, speaker, className = '' }: SpeechBubbleProps) => (

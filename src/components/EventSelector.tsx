@@ -44,8 +44,8 @@ const EventSelector = () => {
             Final events
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-sm font-medium leading-relaxed text-[var(--afl-white)]/85 md:text-lg">
-            Every Mad Monkey showing the game, with its ticket options. Vietnam is on sale now. The
-            rest land here the moment they go live.
+            Every Mad Monkey showing the game, with its ticket options. Your Aussies In code is
+            already built into every link.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ const EventSelector = () => {
                             key={ticket.label}
                             className="rounded-[10px] border-2 border-dashed border-[var(--afl-maroon-deep)]/30 px-3 py-3 text-center text-[0.7rem] font-black uppercase leading-tight tracking-tight text-[var(--afl-maroon-deep)]/45 md:text-sm"
                           >
-                            {ticket.label} — soon
+                            {ticket.label} - soon
                           </span>
                         ),
                       )

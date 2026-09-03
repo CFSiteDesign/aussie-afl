@@ -5,7 +5,7 @@ type WordmarkProps = {
 }
 
 /**
- * The Mad Monkey lockup (monkey head + wordmark), in the on-dark colourway —
+ * The Mad Monkey lockup (monkey head + wordmark), in the on-dark colourway -
  * the whole site sits on the maroon poster world, so one variant covers it.
  */
 const Wordmark = ({ className = '' }: WordmarkProps) => (
