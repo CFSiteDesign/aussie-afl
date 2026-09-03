@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 import crowdImage from '@/assets/crowd.jpg'
-import { COUNTRIES, LOCATIONS, POSTER_ASSETS_URL, isLive, type CountryFilter } from '@/data/events'
+import { COUNTRIES, LOCATIONS, isLive, type CountryFilter } from '@/data/events'
 
 /** Every participating Mad Monkey with its ticket options, Vietnam live first. */
 const EventSelector = () => {
@@ -164,15 +164,6 @@ const EventSelector = () => {
           <p className="text-[0.7rem] font-black uppercase tracking-widest text-[var(--afl-white)]/60 md:text-xs">
             {ordered.length} of {LOCATIONS.length} locations · {liveCount} on sale
           </p>
-          <a
-            href={POSTER_ASSETS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-[10px] border-[3px] border-[var(--afl-white)] px-4 py-2.5 text-[0.7rem] font-black uppercase tracking-tight text-[var(--afl-white)] transition-transform hover:-translate-y-0.5 md:text-xs"
-          >
-            Event poster assets
-            <ExternalLink className="h-4 w-4" aria-hidden="true" />
-          </a>
         </div>
       </div>
     </section>
