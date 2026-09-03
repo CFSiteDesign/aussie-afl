@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 import crowdImage from '@/assets/crowd.jpg'
-import { COUNTRIES, LOCATIONS, POSTER_ASSETS_URL, isLive, type CountryFilter } from '@/data/events'
+import { COUNTRIES, LOCATIONS, isLive, type CountryFilter } from '@/data/events'
 
 /** Every participating Mad Monkey with its ticket options, Vietnam live first. */
 const EventSelector = () => {
