@@ -9,8 +9,6 @@
  * A location with no ticket that has a `url` renders as "COMING SOON".
  */
 
-export const AUSSIES_IN_CODE = 'AUSSIESIN'
-
 /** Grand Final match day. */
 export const GRAND_FINAL_DATE = 'Saturday 26 September'
 /** Ha Giang Loop departure, the morning after the Grand Final. */
@@ -18,8 +16,6 @@ export const HA_GIANG_DATE = 'Sunday 27 September'
 
 export const HA_GIANG_URL =
   'https://madmonkeyhanoi.rezdy.com/777337/the-ha-giang-loop-tour-4d-3n-easy-rider-hanoi-grand-final-afl-event-with-all-you-can-drink-package'
-
-export const POSTER_ASSETS_URL = 'https://www.canva.com/folder/FAHTLxTasjA'
 
 export type Ticket = {
   label: string
