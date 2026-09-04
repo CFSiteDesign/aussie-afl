@@ -1,13 +1,11 @@
 import aflLogo from '@/assets/afl-logo.svg'
 import Wordmark from '@/components/brand/Wordmark'
-import { GRAND_FINAL_DATE, HA_GIANG_URL, POSTER_ASSETS_URL } from '@/data/events'
+import { GRAND_FINAL_DATE, HA_GIANG_URL } from '@/data/events'
 
 const LINKS = [
   { label: 'Ha Giang Loop package', href: '#ha-giang', external: false },
   { label: 'All AFL events', href: '#events', external: false },
-  { label: 'The code', href: '#code', external: false },
   { label: 'Book Ha Giang', href: HA_GIANG_URL, external: true },
-  { label: 'Poster assets', href: POSTER_ASSETS_URL, external: true },
 ]
 
 const FooterSection = () => (
