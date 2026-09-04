@@ -2,7 +2,6 @@ import HeroSection from '@/components/HeroSection'
 import CodeMarquee from '@/components/CodeMarquee'
 import HaGiangSection from '@/components/HaGiangSection'
 import EventSelector from '@/components/EventSelector'
-import CodeSection from '@/components/CodeSection'
 import FooterSection from '@/components/FooterSection'
 
 /**
@@ -15,7 +14,6 @@ const Index = () => (
     <CodeMarquee />
     <HaGiangSection />
     <EventSelector />
-    <CodeSection />
     <FooterSection />
   </div>
 )
