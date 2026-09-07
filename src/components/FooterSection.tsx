@@ -40,8 +40,8 @@ const FooterSection = () => (
       <div className="mt-12 flex flex-col items-center gap-6 border-t-2 border-[var(--afl-white)]/15 pt-8 text-center md:mt-16">
         <div className="flex items-center gap-8 md:gap-12">
           <img src={aflLogo} alt="AFL" className="w-20 md:w-24" loading="lazy" />
-          <img src={aussiesInBadge} alt="Aussies In" className="w-16 md:w-20" loading="lazy" />
           <Wordmark />
+          <img src={aussiesInBadge} alt="Aussies In" className="w-16 md:w-20" loading="lazy" />
         </div>
         <p className="text-[0.7rem] font-black uppercase tracking-widest text-[var(--afl-white)]/50 md:text-xs">
           © {new Date().getFullYear()} Mad Monkey Hostels · with Aussies In

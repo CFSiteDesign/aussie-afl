@@ -42,23 +42,14 @@ const HeroSection = () => (
         Mad Monkey <span className="text-[var(--afl-red)]">×</span> Aussies In present
       </p>
 
-      {/* AFL logo top-centre as on the poster, with the Aussies In badge beside it */}
-      <div className="mt-6 flex items-center justify-center gap-5 md:mt-8 md:gap-8">
-        <img
-          src={aflLogo}
-          alt="AFL"
-          className="w-28 drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] md:w-40"
-          width={160}
-          height={107}
-        />
-        <img
-          src={aussiesInBadge}
-          alt="Aussies In"
-          className="w-20 drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] md:w-28"
-          width={112}
-          height={112}
-        />
-      </div>
+      {/* AFL logo, top-centre as on the poster */}
+      <img
+        src={aflLogo}
+        alt="AFL"
+        className="mt-6 w-28 drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] md:mt-8 md:w-40"
+        width={160}
+        height={107}
+      />
 
       {/* Display block */}
       <h1 className="font-display text-shadow-hero-strong mt-6 text-[var(--afl-mint)] md:mt-8">
@@ -95,7 +86,25 @@ const HeroSection = () => (
         </a>
       </div>
 
+      <img
+        src={aussiesInBadge}
+        alt="Aussies In"
+        className="mt-8 w-20 select-none drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] lg:hidden"
+        width={112}
+        height={112}
+        draggable={false}
+      />
     </div>
+
+    {/* Aussies In badge, bottom-left, mirroring the ALL IN sticker */}
+    <img
+      src={aussiesInBadge}
+      alt="Aussies In"
+      className="absolute bottom-6 left-6 z-20 hidden w-24 select-none drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] lg:block xl:w-28"
+      width={112}
+      height={112}
+      draggable={false}
+    />
 
     {/* ALL IN sticker, bottom-right as on the FINALS poster */}
     <img
