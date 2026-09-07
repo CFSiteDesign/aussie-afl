@@ -1,6 +1,7 @@
 import heroImage from '@/assets/afl-hero.jpg'
 import aflLogo from '@/assets/afl-logo.svg'
 import allInSticker from '@/assets/all-in-sticker.png'
+import aussiesInBadge from '@/assets/aussies-in-badge.png'
 import mmHead from '@/assets/mm-head-white.png'
 import { HA_GIANG_URL } from '@/data/events'
 
@@ -41,14 +42,23 @@ const HeroSection = () => (
         Mad Monkey <span className="text-[var(--afl-red)]">×</span> Aussies In present
       </p>
 
-      {/* AFL logo, top-centre as on the poster */}
-      <img
-        src={aflLogo}
-        alt="AFL"
-        className="mt-6 w-28 drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] md:mt-8 md:w-40"
-        width={160}
-        height={107}
-      />
+      {/* AFL logo top-centre as on the poster, with the Aussies In badge beside it */}
+      <div className="mt-6 flex items-center justify-center gap-5 md:mt-8 md:gap-8">
+        <img
+          src={aflLogo}
+          alt="AFL"
+          className="w-28 drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] md:w-40"
+          width={160}
+          height={107}
+        />
+        <img
+          src={aussiesInBadge}
+          alt="Aussies In"
+          className="w-20 drop-shadow-[0_0_24px_rgba(232,16,28,0.55)] md:w-28"
+          width={112}
+          height={112}
+        />
+      </div>
 
       {/* Display block */}
       <h1 className="font-display text-shadow-hero-strong mt-6 text-[var(--afl-mint)] md:mt-8">

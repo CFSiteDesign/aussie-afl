@@ -1,4 +1,5 @@
 import aflLogo from '@/assets/afl-logo.svg'
+import aussiesInBadge from '@/assets/aussies-in-badge.png'
 import Wordmark from '@/components/brand/Wordmark'
 import { GRAND_FINAL_DATE, HA_GIANG_URL } from '@/data/events'
 
@@ -39,6 +40,7 @@ const FooterSection = () => (
       <div className="mt-12 flex flex-col items-center gap-6 border-t-2 border-[var(--afl-white)]/15 pt-8 text-center md:mt-16">
         <div className="flex items-center gap-8 md:gap-12">
           <img src={aflLogo} alt="AFL" className="w-20 md:w-24" loading="lazy" />
+          <img src={aussiesInBadge} alt="Aussies In" className="w-16 md:w-20" loading="lazy" />
           <Wordmark />
         </div>
         <p className="text-[0.7rem] font-black uppercase tracking-widest text-[var(--afl-white)]/50 md:text-xs">

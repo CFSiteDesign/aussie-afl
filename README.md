@@ -60,7 +60,8 @@ checks every link still carries the code and no cart session.
 ## Asset provenance
 
 **Brand marks are genuine.** `mm-logo-on-dark.webp` (the monkey-head lockup), `mm-head-white.png`
-and `all-in-sticker.png` are the real Mad Monkey assets. `afl-logo.svg` is the official AFL logo (via Wikipedia), used at the client's
+and `all-in-sticker.png` are the real Mad Monkey assets. `aussies-in-badge.png` is the Aussies In
+logo, supplied by the client. `afl-logo.svg` is the official AFL logo (via Wikipedia), used at the client's
 direction to match the campaign posters.
 
 **Photography.** The Ha Giang Loop image (`ha-giang.jpg`) is real Mad Monkey Ha Giang tour
